@@ -1,11 +1,12 @@
+'use client'
 import React from 'react';
 
-const Portfolio = () => {
+const Error = () => {
     return (
         <div>
-            portfolio
+            error
         </div>
     );
 };
 
-export default Portfolio;
+export default Error;
