@@ -1,4 +1,9 @@
+'use client'
 import Link from "next/link";
+
+import styles from './page.module.css'
+
+
 
 const Navbar = () => {
     const links = [
@@ -34,12 +39,13 @@ const Navbar = () => {
         },
     ];
     return (
-        <nav>
-            <Link href={'/'}>MyAPP</Link>
-            <div>
+        <nav className={styles.container}>
+            <Link href={'/'} className={styles.logo}>MyAPP</Link>
+            <div className={styles.links}>
                 {links.map((link) => (
                     <Link key={link.id} href={link.url}>{link.title}</Link>
                 ))}
+                <button className={styles.logout}>Logout</button>
             </div>
         </nav>
     );
